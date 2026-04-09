@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <path id="topArc" d="M 30,110 A 80,80 0 0,1 190,110" />
+    <path id="bottomArc" d="M 45,140 A 75,75 0 0,0 175,140" />
+    <clipPath id="circleClip">
+      <circle cx="110" cy="110" r="95"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer navy ring -->
+  <circle cx="110" cy="110" r="107" fill="#1B3068" stroke="white" stroke-width="3"/>
+  <circle cx="110" cy="110" r="86" fill="white"/>
+  <circle cx="110" cy="110" r="82" fill="white"/>
+
+  <!-- Top arc text: CIVIL AVIATION COLLEGE -->
+  <text font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" letter-spacing="1.5">
+    <textPath href="#topArc" startOffset="5%">CIVIL AVIATION COLLEGE</textPath>
+  </text>
+
+  <!-- Bottom arc text -->
+  <text font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="white" letter-spacing="0.8">
+    <textPath href="#bottomArc" startOffset="4%">OBIHIRO · MIYAZAKI · SENDAI</textPath>
+  </text>
+
+  <!-- Wings emblem -->
+  <g transform="translate(110,68)" fill="#8B6914">
+    <!-- Left wing -->
+    <path d="M-22,-4 C-18,-8 -10,-7 -6,-4 C-10,-5 -16,-3 -22,-4 Z" />
+    <path d="M-18,-5 C-14,-10 -6,-9 -2,-5 C-7,-6 -14,-4 -18,-5 Z" />
+    <!-- Center badge -->
+    <rect x="-6" y="-10" width="12" height="12" rx="1" fill="#8B6914"/>
+    <text x="0" y="-1" text-anchor="middle" font-size="7" fill="white" font-family="serif">大</text>
+    <!-- Right wing -->
+    <path d="M6,-4 C10,-7 18,-8 22,-4 C16,-3 10,-5 6,-4 Z" />
+    <path d="M2,-5 C6,-9 14,-10 18,-5 C14,-4 7,-6 2,-5 Z" />
+  </g>
+
+  <!-- 独立行政法人 small text -->
+  <text x="110" y="84" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#1B3068">独立行政法人</text>
+
+  <!-- 航空大学校 large text -->
+  <text x="110" y="98" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1B3068">航空大学校</text>
+
+  <!-- Airplane body (Cirrus SR22 simplified) -->
+  <g transform="translate(110,128)">
+    <!-- Fuselage -->
+    <ellipse cx="0" cy="0" rx="30" ry="8" fill="#DC2626" stroke="white" stroke-width="1"/>
+    <!-- Cockpit white -->
+    <ellipse cx="6" cy="-2" rx="10" ry="5" fill="#1a1a2e"/>
+    <ellipse cx="8" cy="-2" rx="7" ry="3.5" fill="#374151"/>
+    <!-- Main wing -->
+    <path d="M-5,-3 L-30,4 L-28,8 L-5,2 Z" fill="white" stroke="#9CA3AF" stroke-width="0.5"/>
+    <path d="M-5,-3 L20,2 L20,6 L-5,2 Z" fill="white" stroke="#9CA3AF" stroke-width="0.5"/>
+    <!-- Tail -->
+    <path d="M-26,-3 L-32,-12 L-28,-3 Z" fill="white" stroke="#9CA3AF" stroke-width="0.5"/>
+    <path d="M-26,2 L-32,2 L-26,4 Z" fill="white" stroke="#9CA3AF" stroke-width="0.5"/>
+    <!-- Registration text -->
+    <text x="-10" y="4" text-anchor="middle" font-family="Arial" font-size="5" fill="white" font-weight="bold">JA71MA</text>
+    <!-- Nose -->
+    <ellipse cx="30" cy="0" rx="5" ry="4" fill="#374151"/>
+    <!-- Propeller -->
+    <line x1="33" y1="-7" x2="33" y2="7" stroke="#1a1a2e" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Landing gear -->
+    <line x1="-5" y1="6" x2="-5" y2="12" stroke="#374151" stroke-width="1.5"/>
+    <ellipse cx="-5" cy="13" rx="4" ry="2" fill="#374151"/>
+    <line x1="10" y1="6" x2="10" y2="12" stroke="#374151" stroke-width="1.5"/>
+    <ellipse cx="10" cy="13" rx="3" ry="2" fill="#374151"/>
+  </g>
+
+  <!-- CIRRUS SR22 text -->
+  <text x="110" y="158" text-anchor="middle" font-family="Arial" font-size="6" fill="#6B7280">CIRRUS SR22</text>
+
+  <!-- Decorative dots on border -->
+  <circle cx="110" cy="5" r="2.5" fill="white"/>
+  <circle cx="110" cy="215" r="2.5" fill="white"/>
+  <circle cx="5" cy="110" r="2.5" fill="white"/>
+  <circle cx="215" cy="110" r="2.5" fill="white"/>
+</svg>
