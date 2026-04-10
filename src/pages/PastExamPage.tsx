@@ -43,8 +43,9 @@ export default function PastExamPage() {
   const doneYears = YEARS.filter(y => data.pastExams[y]?.score != null);
   const notDoneYears = YEARS.filter(y => data.pastExams[y]?.score == null);
 
+  // 1. 円グラフのラベルを変更
   const pieData = [
-    { name: '得点記載済み', value: doneYears.length, color: '#6EE7B7' },
+    { name: '総合2記載済み', value: doneYears.length, color: '#6EE7B7' },
     { name: '未記載', value: notDoneYears.length, color: '#FCA5A5' },
   ].filter(d => d.value > 0);
 
@@ -83,11 +84,13 @@ export default function PastExamPage() {
 
       {/* Table */}
       <div className="card" style={{ overflow: 'hidden' }}>
-        <div style={{ padding: '14px 16px 10px', fontSize: 15, fontWeight: 700, color: '#374151' }}>得点一覧</div>
+        {/* 2. 表のタイトルを変更 */}
+        <div style={{ padding: '14px 16px 10px', fontSize: 15, fontWeight: 700, color: '#374151' }}>総合2・英語一覧</div>
         <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 1fr 60px', background: '#F9FAFB', padding: '8px 16px', borderBottom: '1px solid #E5E7EB' }}>
           <span style={{ fontSize: 12, fontWeight: 600, color: '#6B7280' }}>年度</span>
-          <span style={{ fontSize: 12, fontWeight: 600, color: '#6B7280' }}>得点</span>
-          <span style={{ fontSize: 12, fontWeight: 600, color: '#6B7280' }}>予想合格点</span>
+          {/* 3. 列の見出しを変更 */}
+          <span style={{ fontSize: 12, fontWeight: 600, color: '#6B7280' }}>総合2</span>
+          <span style={{ fontSize: 12, fontWeight: 600, color: '#6B7280' }}>英語</span>
           <span style={{ fontSize: 12, fontWeight: 600, color: '#6B7280' }}></span>
         </div>
         {YEARS.map(year => {
@@ -130,9 +133,11 @@ export default function PastExamPage() {
         <div className="modal-overlay" onClick={() => setEditYear(null)}>
           <div className="modal-sheet" onClick={e => e.stopPropagation()}>
             <div className="modal-handle" />
-            <h3 style={{ fontSize: 20, fontWeight: 800, marginTop: 0, marginBottom: 20 }}>{editYear}年度の得点入力</h3>
+            {/* 4. 入力画面のタイトルを変更 */}
+            <h3 style={{ fontSize: 20, fontWeight: 800, marginTop: 0, marginBottom: 20 }}>{editYear}年度の結果入力</h3>
             <div style={{ marginBottom: 14 }}>
-              <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 }}>得点</label>
+              {/* 5. 入力項目のラベルを変更 */}
+              <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 }}>総合2</label>
               <input
                 type="number"
                 value={scoreInput}
@@ -143,7 +148,8 @@ export default function PastExamPage() {
               />
             </div>
             <div style={{ marginBottom: 24 }}>
-              <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 }}>予想合格最低点</label>
+              {/* 6. 入力項目のラベルを変更 */}
+              <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: '#374151', marginBottom: 6 }}>英語</label>
               <input
                 type="number"
                 value={predictedInput}
